@@ -3,17 +3,24 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Loader from './components/Loader/Loader.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
+import Registration from './components/Login/Registration/Registration.jsx';
+import Login from './components/Login/Login/Login.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage></ErrorPage>,
-    children: [
-    ]
   },
+  {
+    path: '/registration',
+    element: <Registration></Registration>,
+  },
+  {
+    path: '/login',
+    element: <Login></Login>
+  }
 ]);
 
 
