@@ -1,0 +1,9 @@
+.one{
+    position: relative;
+}
+
+.one .home{
+    background-color: brown;
+    position: relative;
+    bottom: 100px;
+}
