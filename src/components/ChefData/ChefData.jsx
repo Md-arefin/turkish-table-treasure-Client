@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { FaHeart } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 const ChefData = ({ data }) => {
@@ -25,7 +26,9 @@ const ChefData = ({ data }) => {
                         <p><span className='fw-bold fs-6'>Social Media likes:</span>  <FaHeart className='text-danger' /> {likes}.
                         </p>
                     </Card.Text>
-                    <Button variant="danger opacity-75">View Recipes</Button>
+                    <Link to={`/chef-details/${_id}`}>
+                        <Button variant="danger opacity-75">View Recipes</Button>
+                    </Link>
                 </Card.Body>
             </Card>
         </Col>

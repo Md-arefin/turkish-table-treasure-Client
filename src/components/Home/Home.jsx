@@ -13,10 +13,10 @@ const Home = () => {
 
             {/* banner */}
 
-            <div className='w-auto h-75 position-relative bg-black' >
+            <div className='w-auto h-50 position-relative bg-black' >
 
                 <div>
-                    <img className='img-fluid opacity-50' src="https://i.ibb.co/B2yD0B0/flat-lay-frame-with-grains-stucco-background-86.jpg" alt="" />
+                    <img className='img-fluid opacity-50' src="https://i.ibb.co/KxKWdC6/flat-lay-assortment-tasty-kebabs-with-copy-space.jpg" alt="" />
                 </div>
 
                 <div className='position-absolute bottom-50 start-50 translate-middle-x text-center text-white w-100 px-5'>
@@ -26,7 +26,7 @@ const Home = () => {
                     </h1>
 
                     <p className=' fs-4 '>
-                        The title "Discover the Rich Flavors of Turkey" and the website name TurkishTableTreasure.com perfectly capture the essence of this food recipe website. Visitors to the site will find a treasure trove of Turkish culinary delights, ranging from traditional dishes to modern interpretations. The site is a virtual journey through the tastes of Turkey, offering a sensory exploration of the country's diverse and delicious cuisine. Whether you're an experienced chef or a novice cook, Turkish Table Treasure is the perfect place to discover new flavors and expand your culinary repertoire.
+                        The title "Discover the Rich Flavors of Turkey" and the website TurkishTableTreasure.com perfectly capture the essence of this food recipe website. Visitors to the site will find a treasure trove of Turkish culinary delights, ranging from traditional dishes to modern interpretations. The site is a virtual journey through the tastes of Turkey, offering a sensory exploration of the country's diverse and delicious cuisine. Whether you're an experienced chef or a novice cook, Turkish Table Treasure is the perfect place to discover new flavors and expand your culinary repertoire.
                     </p>
                 </div>
             </div>
@@ -199,9 +199,11 @@ const Home = () => {
                             <br />
                             Some of the common ingredients in Turkish cuisine include vegetables like eggplant, peppers, tomatoes, and zucchini, which are rich in vitamins and minerals. Lean proteins like lamb, chicken, and fish are also commonly used, which can be a good source of protein, as well as omega-3 fatty acids.
                             <br />
-                            Turkish cuisine also often includes legumes such as chickpeas and lentils, which are high in fiber and protein, as well as nuts like pistachios and walnuts, which can be a good source of healthy fats.
                             <br />
+                            Turkish cuisine also often includes legumes such as chickpeas and lentils, which are high in fiber and protein, as well as nuts like pistachios and walnuts, which can be a good source of healthy fats.
+                            
                             However, it is worth noting that some traditional Turkish dishes may be high in calories, sodium, and fat due to the use of oil, butter, and cheese. Portion control is important when consuming these dishes.
+                            <br />
                             <br />
                             Overall, Turkish cuisine can be a healthy and nutritious option, especially when using fresh, whole ingredients and practicing moderation.
                         </p>
@@ -210,6 +212,7 @@ const Home = () => {
 
                 <div className='container my-5 d-flex gap-5'>
                     <div >
+                        <h3 className='py-2 text-center'>Average nutrition facts from Turkey</h3>
                         <Table striped bordered hover>
                             <thead>
                                 <tr>
@@ -299,8 +302,8 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className=' w-50 h-50 '>
-                        <img className='w-100 rounded h-50' src="https://i.ibb.co/7zGZ0Nw/7878.jpg" alt="" />
+                    <div className=' w-50 h-50 py-5'>
+                        <img className='w-100 rounded h-100 py-5' src="https://i.ibb.co/7zGZ0Nw/7878.jpg" alt="" />
                     </div>
                 </div>
 
@@ -310,9 +313,22 @@ const Home = () => {
                         <img className='w-100 rounded h-50' src="https://i.ibb.co/3TSVH1K/2002-i203-016-nutritionist-dietitian-cartoon.jpg" alt="" />
                     </div>
 
-                    <div>
+                    <div className='w-50 py-5'>
                         <h3>Some tips from nutritionist</h3>
+                        <p>
+                            Start your day with a traditional Turkish breakfast, which typically includes fresh vegetables, olives, cheese, boiled eggs, and whole-grain bread. This is a nutritious and filling meal that will keep you energized throughout the morning.
 
+                            For lunch, try a bowl of lentil soup or a mixed salad with grilled chicken or fish. Turkish cuisine features many dishes that are rich in vegetables, legumes, and lean proteins, which are all great options for a healthy diet.
+
+                            Avoid fried and greasy foods, such as doner kebab or fried chicken, as they are high in calories and unhealthy fats. Instead, opt for grilled or baked dishes, such as grilled fish or chicken shish kebab.
+                            <br />
+                            <br />
+                            Snack on fresh fruit, nuts, or dried fruit, which are widely available in local markets and street vendors. Turkish dried apricots and figs are particularly delicious and nutritious.
+
+                            Drink plenty of water to stay hydrated and avoid sugary drinks. Turkish tea or herbal teas are also great options.
+
+                            Finally, try to enjoy the local food culture in moderation, and balance your meals with physical activity and exercise. Turkey is known for its beautiful parks, scenic walking trails, and historical landmarks, so take advantage of the opportunities to explore and stay active while you enjoy the local cuisine.
+                        </p>
                     </div>
                 </div>
             </div>
