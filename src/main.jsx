@@ -8,12 +8,19 @@ import Registration from './components/Login/Registration/Registration.jsx';
 import Login from './components/Login/Login/Login.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './components/Layout/Main.jsx';
+import Home from './components/Home/Home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
     errorElement: <ErrorPage></ErrorPage>,
+    children:[
+      {
+        path: '/',
+        element: <Home></Home>
+      }
+    ]
   },
   {
     path: '/registration',
