@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import { Carousel, Col, Container, Row, Table } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import ChefData from '../ChefData/ChefData';
 
@@ -10,6 +10,9 @@ const Home = () => {
 
     return (
         <div>
+
+            {/* banner */}
+
             <div className='w-auto h-75 position-relative bg-black' >
 
                 <div>
@@ -27,6 +30,8 @@ const Home = () => {
                     </p>
                 </div>
             </div>
+
+            {/* carousel */}
 
             <div className='container my-5 py-5 rounded bg-danger bg-opacity-75 text-center'>
 
@@ -160,7 +165,11 @@ const Home = () => {
                 </Carousel>
 
             </div>
+
+            {/* chef cards */}
+
             <div className='container mx-auto'>
+                <h3 className='text-center fs-1'>Famous Chef's</h3>
                 <Container fluid >
                     <Row>
 
@@ -174,6 +183,138 @@ const Home = () => {
                     </Row>
 
                 </Container>
+            </div>
+
+            {/* Health section */}
+            <div className='container my-5 py-5'>
+                <h2 className='fs-4 text-center'>Healthy Delights from the Heart of Turkey: Nourishing Your Body and Soul with Turkish Cuisine</h2>
+                <div className='container my-5 d-flex gap-5'>
+                    <div className=' w-50 h-50 '>
+                        <img className='w-100 rounded h-50' src="https://i.ibb.co/fF65L57/3637975.jpg" alt="" />
+                    </div>
+                    <div className='col py-5'>
+                        <h3>Doctor's thoughts regarding famous Turkish food:</h3>
+                        <p>
+                            Turkish cuisine is known for its rich and diverse flavors, with a focus on fresh, seasonal ingredients. Many of the traditional Turkish dishes feature lean proteins, vegetables, and whole grains, which can provide a balanced and nutritious meal.
+                            <br />
+                            Some of the common ingredients in Turkish cuisine include vegetables like eggplant, peppers, tomatoes, and zucchini, which are rich in vitamins and minerals. Lean proteins like lamb, chicken, and fish are also commonly used, which can be a good source of protein, as well as omega-3 fatty acids.
+                            <br />
+                            Turkish cuisine also often includes legumes such as chickpeas and lentils, which are high in fiber and protein, as well as nuts like pistachios and walnuts, which can be a good source of healthy fats.
+                            <br />
+                            However, it is worth noting that some traditional Turkish dishes may be high in calories, sodium, and fat due to the use of oil, butter, and cheese. Portion control is important when consuming these dishes.
+                            <br />
+                            Overall, Turkish cuisine can be a healthy and nutritious option, especially when using fresh, whole ingredients and practicing moderation.
+                        </p>
+                    </div>
+                </div>
+
+                <div className='container my-5 d-flex gap-5'>
+                    <div >
+                        <Table striped bordered hover>
+                            <thead>
+                                <tr>
+
+                                    <th>Nutrient</th>
+                                    <th>Amount Per Serving</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td>Calories</td>
+                                    <td>	377</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td>Total Fat</td>
+                                    <td>11 g</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td >Saturated Fat</td>
+                                    <td>2 g</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Trans Fat</td>
+                                    <td>0 g</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Cholesterol</td>
+                                    <td>	124 mg</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Sodium</td>
+                                    <td>560 mg</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Total Carbohydrates</td>
+                                    <td>19 g</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Dietary Fiber</td>
+                                    <td>6 g</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Sugars</td>
+                                    <td>8 g</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Protein</td>
+                                    <td>50 g</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Vitamin D</td>
+                                    <td>0.5 mcg</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Calcium</td>
+                                    <td>55 mg</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Iron</td>
+                                    <td>	3.2 mg</td>
+                                </tr>
+                                <tr>
+
+                                    <td >Potassium</td>
+                                    <td>955 mg</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                        <p>
+                            Note: The nutrient amounts are approximate and may vary depending on the recipe and serving size.
+                        </p>
+                    </div>
+
+                    <div className=' w-50 h-50 '>
+                        <img className='w-100 rounded h-50' src="https://i.ibb.co/7zGZ0Nw/7878.jpg" alt="" />
+                    </div>
+                </div>
+
+                <div className='container my-5 d-flex gap-5'>
+
+                    <div className=' w-50 h-50 '>
+                        <img className='w-100 rounded h-50' src="https://i.ibb.co/3TSVH1K/2002-i203-016-nutritionist-dietitian-cartoon.jpg" alt="" />
+                    </div>
+
+                    <div>
+                        <h3>Some tips from nutritionist</h3>
+
+                    </div>
+                </div>
             </div>
 
         </div >
