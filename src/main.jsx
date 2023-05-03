@@ -7,11 +7,12 @@ import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import Registration from './components/Login/Registration/Registration.jsx';
 import Login from './components/Login/Login/Login.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Main from './components/Layout/Main.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world</div>,
+    element: <Main></Main>,
     errorElement: <ErrorPage></ErrorPage>,
   },
   {
