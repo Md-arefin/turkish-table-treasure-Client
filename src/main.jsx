@@ -10,38 +10,44 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './components/Layout/Main.jsx';
 import Home from './components/Home/Home.jsx';
 import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
+import AuthProvider from './providers/AuthProvider.jsx';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
     errorElement: <ErrorPage></ErrorPage>,
-    children:[
+    children: [
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch ('https://food-recipe-server-md-arefin.vercel.app/foodRecipe') ,
+        loader: () => fetch('https://food-recipe-server-md-arefin.vercel.app/foodRecipe'),
       },
       {
-        path:'/chef-details/:id',
+        path: '/chef-details/:id',
         element: <ChefDetails></ChefDetails>,
-        loader: ({params}) => fetch(`https://food-recipe-server-md-arefin.vercel.app/foodRecipe/${params.id}`)
+        loader: ({ params }) => fetch(`https://food-recipe-server-md-arefin.vercel.app/foodRecipe/${params.id}`)
+      },
+      {
+        path: '/registration',
+        element: <Registration></Registration>,
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
       }
     ]
-  },
-  {
-    path: '/registration',
-    element: <Registration></Registration>,
-  },
-  {
-    path: '/login',
-    element: <Login></Login>
   }
 ]);
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

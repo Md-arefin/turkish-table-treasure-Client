@@ -212,8 +212,8 @@ const Home = () => {
 
                 <div className='container my-5 d-flex gap-5'>
                     <div >
-                        <h3 className='py-2 text-center'>Average nutrition facts from Turkey</h3>
-                        <Table striped bordered hover>
+                        <h3 className='py-2 text-center'>Average Nutrition From Turkish Food</h3>
+                        <Table striped bordered hover className='text-center'>
                             <thead>
                                 <tr>
 
@@ -298,7 +298,7 @@ const Home = () => {
                             </tbody>
                         </Table>
                         <p>
-                            Note: The nutrient amounts are approximate and may vary depending on the recipe and serving size.
+                           <span className='fw-bold fs-5'> Note:</span> The nutrient amounts are approximate and may vary depending on the recipe and serving size.
                         </p>
                     </div>
 
@@ -314,7 +314,7 @@ const Home = () => {
                     </div>
 
                     <div className='w-50 py-5'>
-                        <h3>Some tips from nutritionist</h3>
+                        <h3>Some Tips From Nutritionist</h3>
                         <p>
                             Start your day with a traditional Turkish breakfast, which typically includes fresh vegetables, olives, cheese, boiled eggs, and whole-grain bread. This is a nutritious and filling meal that will keep you energized throughout the morning.
 

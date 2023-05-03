@@ -14,9 +14,9 @@ const ChefDetails = () => {
         yearsOfExperience, recipes } = ChefData;
     return (
         <div className='container mx-auto my-5'>
-            <div className='my-5 d-flex'>
+            <div className='my-5 d-flex gap-5'>
                 <div className='w-75 h-75 '>
-                    <img className='w-75 h-75 rounded' src={chefPicture} alt="" />
+                    <img className='rounded' style={{ width: '28rem', height: " 25rem" }} src={chefPicture} alt="" />
                 </div>
                 <div>
                     <h3>{chefName}</h3>
