@@ -16,7 +16,7 @@ const Home = () => {
             <div className='w-auto h-50 position-relative bg-black' >
 
                 <div>
-                    <img className='img-fluid opacity-50' src="https://i.ibb.co/KxKWdC6/flat-lay-assortment-tasty-kebabs-with-copy-space.jpg" alt="" />
+                    <img className='img-fluid opacity-25' src="https://i.ibb.co/KxKWdC6/flat-lay-assortment-tasty-kebabs-with-copy-space.jpg" alt="" />
                 </div>
 
                 <div className='position-absolute bottom-50 start-50 translate-middle-x text-center text-white w-100 px-5'>

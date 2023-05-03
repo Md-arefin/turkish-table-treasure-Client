@@ -23,7 +23,7 @@ const ChefData = ({ data }) => {
                         </p>
                         <p><span className='fw-bold fs-6'>Number of recipes:</span> {numberOfRecipes}.
                         </p>
-                        <p><span className='fw-bold fs-6'>Social Media likes:</span>  <FaHeart className='text-danger' /> {likes}.
+                        <p><span className='fw-bold fs-6'>  <FaHeart className='text-danger' /> Social Media likes:</span> {likes}.
                         </p>
                     </Card.Text>
                     <Link to={`/chef-details/${_id}`}>
