@@ -13,6 +13,7 @@ import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import AuthProvider from './providers/AuthProvider.jsx';
+import PrivateRoute from './PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/chef-details/:id',
-        element: <ChefDetails></ChefDetails>,
+        element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`https://food-recipe-server-md-arefin.vercel.app/foodRecipe/${params.id}`)
       },
       {

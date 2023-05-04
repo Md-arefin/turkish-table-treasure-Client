@@ -3,10 +3,11 @@ import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
-
 const Registration = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, signInGooglePopUp } = useContext(AuthContext);
+
     const [error, setError] = useState("")
+
     const handleReg = event => {
         event.preventDefault();
         const form = event.target;
@@ -16,11 +17,12 @@ const Registration = () => {
         const password = form.password.value;
         const confirmPassword = form.confirm_password.value;
 
-        console.log(name, email, photo, password, confirmPassword)
+        // console.log(name, email, photo, password, confirmPassword)
+
+        // Validation start
         setError('')
 
-
-        if(!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password)) {
+        if (!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password)) {
             setError("your password should be minimum 8 characters, at least 1 letter and 1 number and 1 special character");
             return;
 
@@ -33,14 +35,23 @@ const Registration = () => {
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
-                console.log(createdUser);
+                // console.log(createdUser);
             })
             .catch(error => {
                 console.log(error);
             })
     }
 
-    // "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+    const handleGoogle = () => {
+        signInGooglePopUp()
+            .then(result => {
+                const user = result.user;
+                // console.log(user);
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+    }
 
 
     return (
@@ -90,6 +101,10 @@ const Registration = () => {
             <p className='my-3'>
                 Already have an account? <Link to='/login'>Please Login</Link>
             </p>
+            <div>
+                <img onClick={handleGoogle} className='border' style={{width:'180px'}} src="https://i.ibb.co/M6sGqDy/GButton.jpg" alt="" />
+            </div>
+
         </div>
     );
 };

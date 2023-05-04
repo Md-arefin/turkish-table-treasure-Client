@@ -7,7 +7,13 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
 
-    const user = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error));
+    }
 
     return (
         <>
@@ -21,13 +27,21 @@ const Header = () => {
                     <Nav.Link href="#">
                         {
 
-                            user && <FaUserGraduate className="text-primary fs-4" />
+                            user ? 
+                            <div className='d-flex'>
+                                <span className='text-white px-2'>{user.displayName}</span>
+                                <div>
+                                    <img style={{width:'25px', height:"25px"}} src={user.photoURL} alt="" />
+                                </div>
+                            </div> : <FaUserGraduate className="text-primary fs-4" />
 
                         }
                     </Nav.Link>
                     <Nav.Link href="#" className='px-3'>
                         {
-                            user ? <Button variant='danger'>Logout</Button> :
+                            user ? <Button
+                                onClick={handleLogOut}
+                                variant='danger'>Logout</Button> :
                                 <Link to='/login'>
                                     <Button variant='success'>Login</Button>
                                 </Link>
