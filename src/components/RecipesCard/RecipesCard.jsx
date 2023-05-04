@@ -1,10 +1,23 @@
 import { Rating } from '@smastrom/react-rating';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { FaHeart } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 const RecipesCard = ({ recipe }) => {
+
+    const [isClicked, setIsClicked] = useState(false);
+
     // console.log(recipe)
     const { image, ingredients, name, steps } = recipe;
+
+    const handleFavBtn = () => {
+        toast("My Favorite Recipe");
+        setIsClicked(true);
+    }
 
     return (
         <Col className='py-3'>
@@ -25,19 +38,23 @@ const RecipesCard = ({ recipe }) => {
                         </div>
                         <p className='d-flex gap-2'><span className='fw-bold fs-5'>Ratings: 4.5</span>
                             <Rating
-                                style={{ maxWidth: 105}}
+                                style={{ maxWidth: 105 }}
                                 value={4.5}
                                 readOnly
                             />
                         </p>
                     </Card.Text>
                     <Button
+                        onClick={handleFavBtn}
+                        disabled={{isClicked}}
                         className='border rounded bg-success w-100
                         position-absolute bottom-0 start-0'
                         variant="">
                         <span className='fw-bold fs-5 px-5'>Favorite</span>
                         <FaHeart className='text-danger fs-3' />
+                        <ToastContainer />
                     </Button>
+
                 </Card.Body>
             </Card>
         </Col>

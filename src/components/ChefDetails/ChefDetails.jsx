@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import { FaHeart } from "react-icons/fa";
 import RecipesCard from '../RecipesCard/RecipesCard';
 import { Row } from 'react-bootstrap';
-
+import LazyLoad from 'react-lazy-load';
 
 const ChefDetails = () => {
 
@@ -16,7 +16,9 @@ const ChefDetails = () => {
         <div className='container mx-auto my-5'>
             <div className='my-5 d-flex gap-5'>
                 <div className='w-75 h-75 '>
-                    <img className='rounded' style={{ width: '28rem', height: " 25rem" }} src={chefPicture} alt="" />
+                    <LazyLoad height={762}>
+                        <img className='rounded' style={{ width: '28rem', height: " 25rem" }} src={chefPicture} alt="" />
+                    </LazyLoad>
                 </div>
                 <div>
                     <h3>{chefName}</h3>
@@ -31,8 +33,8 @@ const ChefDetails = () => {
                 <Row>
                     {
                         recipes.map((recipe, i) => <RecipesCard
-                        key={i}
-                        recipe={recipe}
+                            key={i}
+                            recipe={recipe}
                         ></RecipesCard>)
                     }
                 </Row>

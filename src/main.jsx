@@ -14,6 +14,8 @@ import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import AuthProvider from './providers/AuthProvider.jsx';
 import PrivateRoute from './PrivateRoute.jsx';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const router = createBrowserRouter([
@@ -49,6 +51,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
+      
+      <ToastContainer />
     </AuthProvider>
   </React.StrictMode>,
 )
