@@ -41,7 +41,7 @@ const Home = () => {
 
                 <Carousel className='px-5 mx-auto'>
                     <Carousel.Item>
-                        <div className='d-flex '>
+                        <div className='d-lg-flex '>
                             <img
                                 className=" w-50 h-50 rounded "
 
@@ -61,7 +61,7 @@ const Home = () => {
                     </Carousel.Item>
 
                     <Carousel.Item>
-                        <div className='d-flex'>
+                        <div className='d-lg-flex'>
                             <img
                                 className="d-block w-50 h-25  rounded"
                                 src="https://i.ibb.co/X2ktQnh/Sea-bass.jpg"
@@ -75,7 +75,7 @@ const Home = () => {
                         </div>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <div className='d-flex'>
+                        <div className='d-lg-flex'>
                             <img
                                 className="d-block w-50 h-25  rounded  "
                                 src="https://i.ibb.co/314Xt59/Baklava-Recipe-16.jpg"
@@ -90,7 +90,7 @@ const Home = () => {
                         </div>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <div className='d-flex'>
+                        <div className='d-lg-flex'>
                             <img
                                 className="d-block w-50 h-25  rounded  "
                                 src="https://i.ibb.co/HPGJ24Q/best-lamb-kebab-recipe.jpg"
@@ -106,7 +106,7 @@ const Home = () => {
                         </div>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <div className='d-flex'>
+                        <div className='d-lg-flex'>
                             <img
                                 className="d-block w-50 h-25  rounded  "
                                 src="https://i.ibb.co/dsTKyN4/baklava-recipe-3.jpg"
@@ -122,7 +122,7 @@ const Home = () => {
                         </div>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <div className='d-flex'>
+                        <div className='d-lg-flex'>
                             <img
                                 className="d-block w-50 h-25 rounded  "
                                 src="https://i.ibb.co/k3pR4pr/Manti-84d39c9632cf40fcb0ca7625d63556b5.jpg"
@@ -136,7 +136,7 @@ const Home = () => {
                         </div>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <div className='d-flex'>
+                        <div className='d-lg-flex'>
                             <img
                                 className="d-block w-50 h-25  rounded  "
                                 src="https://i.ibb.co/zxg77C2/turkish-adana-kebab-720x720.jpg"
@@ -150,7 +150,7 @@ const Home = () => {
                     </Carousel.Item>
 
                     <Carousel.Item>
-                        <div className='d-flex'>
+                        <div className='d-lg-flex'>
                             <img
                                 className="d-block w-50 h-25  rounded  "
                                 src="https://i.ibb.co/4Tnsmk7/Turkish-Pizza-Lahmacun.jpg"
@@ -188,7 +188,7 @@ const Home = () => {
             {/* Health section */}
             <div className='container my-5 py-5'>
                 <h2 className='fs-4 text-center'>Healthy Delights from the Heart of Turkey: Nourishing Your Body and Soul with Turkish Cuisine</h2>
-                <div className='container my-5 d-flex gap-5'>
+                <div className='container my-5 d-lg-flex gap-5'>
                     <div className=' w-50 h-50 '>
                         <img className='w-100 rounded h-50' src="https://i.ibb.co/fF65L57/3637975.jpg" alt="" />
                     </div>
@@ -210,7 +210,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='container my-5 d-flex gap-5'>
+                <div className='container my-5 d-lg-flex gap-5'>
                     <div >
                         <h3 className='py-2 text-center'>Average Nutrition From Turkish Food</h3>
                         <Table striped bordered hover className='text-center'>
@@ -307,7 +307,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='container my-5 d-flex gap-5'>
+                <div className='container my-5 d-lg-flex gap-5'>
 
                     <div className=' w-50 h-50 '>
                         <img className='w-100 rounded h-50' src="https://i.ibb.co/3TSVH1K/2002-i203-016-nutritionist-dietitian-cartoon.jpg" alt="" />

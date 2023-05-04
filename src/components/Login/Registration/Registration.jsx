@@ -35,7 +35,7 @@ const Registration = () => {
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
-                // console.log(createdUser);
+                console.log(createdUser);
             })
             .catch(error => {
                 console.log(error);
@@ -46,7 +46,7 @@ const Registration = () => {
         signInGooglePopUp()
             .then(result => {
                 const user = result.user;
-                // console.log(user);
+                console.log(user);
             })
             .catch(error => {
                 console.log(error.message)

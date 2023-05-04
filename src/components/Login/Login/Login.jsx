@@ -12,12 +12,17 @@ const Login = () => {
     const navigate = useNavigate();
 
     const location = useLocation();
-    const from = location?.state?.from?.pathname || '/' ;
+    // console.log(location)
+
+    const from = location.state?.from?.pathname || '/' ;
+
+
     const handleGoogle = () => {
         signInGooglePopUp()
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
+                navigate(from ,{ replace: true })
             })
             .catch(error => {
                 console.log(error.message)
@@ -31,7 +36,7 @@ const Login = () => {
         const password = form.password.value;
 
 
-        console.log(email, password)
+        // console.log(email, password)
 
         // Validation start
 
@@ -47,7 +52,6 @@ const Login = () => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser)
-            form.reset();
             navigate(from ,{ replace: true })
         })
         .catch(error =>{

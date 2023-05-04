@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { FaHeart } from "react-icons/fa";
 const RecipesCard = ({ recipe }) => {
-    console.log(recipe)
+    // console.log(recipe)
     const { image, ingredients, name, steps } = recipe;
 
     return (
