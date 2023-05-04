@@ -3,7 +3,7 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { AuthContext } from '../../providers/AuthProvider';
 import { FaUserGraduate } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
+import './Header.css'
 
 const Header = () => {
 
@@ -18,8 +18,8 @@ const Header = () => {
     return (
         <>
             <Navbar bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand href="/">Turkish Table Treasure</Navbar.Brand>
+                <Container className='res-header'>
+                    <Navbar.Brand className='cs-title' href="/">Turkish Table Treasure</Navbar.Brand>
                     <Nav className="mx-auto">
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/about">About us</Nav.Link>
@@ -40,10 +40,11 @@ const Header = () => {
                     <Nav.Link href="#" className='px-3'>
                         {
                             user ? <Button
+                            className='cs-btn'
                                 onClick={handleLogOut}
                                 variant='danger'>Logout</Button> :
-                                <Link to='/login'>
-                                    <Button variant='success'>Login</Button>
+                                <Link to='/login' className='cs-btn'>
+                                    <Button className='cs-btn' variant='success'>Login</Button>
                                 </Link>
                         }
                     </Nav.Link>

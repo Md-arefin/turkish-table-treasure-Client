@@ -1,0 +1,9 @@
+@media screen and (min-width:350px) and (max-width:700px){
+    .res-header{
+        font-size: 12px !important;
+    }
+
+    .cs-title{
+        font-size: 15px !important;
+    }
+}

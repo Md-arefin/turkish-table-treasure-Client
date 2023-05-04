@@ -7,14 +7,14 @@ const Login = () => {
 
     const [loginError, setLoginError] = useState("")
 
-    const { signIn, signInGooglePopUp } = useContext(AuthContext);
+    const { signIn, signInGooglePopUp, gitLogin } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
     const location = useLocation();
     // console.log(location)
 
-    const from = location.state?.from?.pathname || '/' ;
+    const from = location.state?.from?.pathname || '/';
 
 
     const handleGoogle = () => {
@@ -22,7 +22,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 // console.log(user);
-                navigate(from ,{ replace: true })
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error.message)
@@ -49,15 +49,28 @@ const Login = () => {
 
 
         signIn(email, password)
-        .then(result =>{
-            const loggedUser = result.user;
-            console.log(loggedUser)
-            navigate(from ,{ replace: true })
-        })
-        .catch(error =>{
-            setLoginError(error.message)
-            console.log(error);
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser)
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                setLoginError(error.message)
+                console.log(error);
+            })
+
+    }
+    const handleGitHub = () => {
+        gitLogin()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser)
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                setLoginError(error.message)
+                console.log(error);
+            })
     }
 
     return (
@@ -92,9 +105,9 @@ const Login = () => {
             </p>
 
             <div >
-                <img onClick={handleGoogle} className='border curs' style={{ width: '180px',cursor: 'pointer' }} src="https://i.ibb.co/M6sGqDy/GButton.jpg" alt="" />
-           
-                <img onClick={handleGoogle} className='border mx-5' style={{ width: '220px', height:'38px' ,cursor: 'pointer'}} src="https://i.ibb.co/KxxhDhC/sign-in-with-github-button4213654.jpg" alt="" />
+                <img onClick={handleGoogle} className='border curs' style={{ width: '180px', cursor: 'pointer' }} src="https://i.ibb.co/M6sGqDy/GButton.jpg" alt="" />
+
+                <img onClick={handleGitHub} className='border mx-5' style={{ width: '220px', height: '38px', cursor: 'pointer' }} src="https://i.ibb.co/KxxhDhC/sign-in-with-github-button4213654.jpg" alt="" />
             </div>
         </div>
     );
