@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Registration = () => {
-    const { createUser, signInGooglePopUp } = useContext(AuthContext);
+    const { createUser, signInGooglePopUp, profileUpdate } = useContext(AuthContext);
 
     const [error, setError] = useState("")
 
@@ -40,6 +40,13 @@ const Registration = () => {
             .catch(error => {
                 console.log(error);
             })
+
+            profileUpdate(name, photo)
+            .then(() =>{ })
+            .catch(error =>{
+                console.log(error)
+            })
+
     }
 
     const handleGoogle = () => {
@@ -52,6 +59,8 @@ const Registration = () => {
                 console.log(error.message)
             })
     }
+
+
 
 
     return (
@@ -102,7 +111,7 @@ const Registration = () => {
                 Already have an account? <Link to='/login'>Please Login</Link>
             </p>
             <div>
-                <img onClick={handleGoogle} className='border' style={{width:'180px'}} src="https://i.ibb.co/M6sGqDy/GButton.jpg" alt="" />
+                <img onClick={handleGoogle} className='border' style={{ width: '180px' }} src="https://i.ibb.co/M6sGqDy/GButton.jpg" alt="" />
             </div>
 
         </div>

@@ -1,0 +1,8 @@
+@media screen and (min-width:350px) and (max-width:700px){
+    .chefs{
+        width: 320px !important;
+        margin-left: 0 !important;
+    }
+}
+
+

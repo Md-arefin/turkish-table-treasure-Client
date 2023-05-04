@@ -1,0 +1,72 @@
+@media screen and (min-width:350px) and (max-width:700px){
+    .banner , .banner img{
+        width: 100%;
+        height: 550px;
+    }
+
+    .banner-title {
+        position: absolute;
+        top: 55px;
+    }
+
+    .banner-title p{
+        font-size: 16px !important;
+    }
+
+    .banner-title h1{
+        font-size: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .my-slider{
+       margin: 10px auto !important;
+       width: 345px !important;
+    }
+
+    .my-slider-img{
+        width: 100% !important;
+        height: 450px !important;
+        padding: 10px auto;
+        margin: 5px auto;
+        display: inline;
+    }
+
+    .my-slider-text{
+        padding: 5px 5px !important;
+    }
+
+    .my-slider-text h3{
+        font-size: 18px !important;
+    }
+
+    .my-slider-text p, .my-slider-text span{
+        font-size: 16px !important;
+    }
+
+    .chefs{
+        margin-right: 5px  !important;
+    }
+
+    .health-img{
+        width: 320px !important;
+    }
+
+    .health-fx{
+        display: flex;
+        flex-direction: column-reverse !important;
+    }
+
+    .health-fx-img{
+        width: 330px !important;
+        height: 550px !important;
+        padding: 0;
+    }
+
+    .nutrition{
+        width: 300px !important;
+    }
+
+    .nutrition-img{
+        width: 300px !important;
+    }
+}

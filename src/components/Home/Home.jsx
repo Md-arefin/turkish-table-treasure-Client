@@ -2,6 +2,8 @@ import React from 'react';
 import { Carousel, Col, Container, Row, Table } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import ChefData from '../ChefData/ChefData';
+import './Home.css';
+
 
 const Home = () => {
 
@@ -15,11 +17,11 @@ const Home = () => {
 
             <div className='w-auto h-50 position-relative bg-black' >
 
-                <div>
+                <div className='banner'>
                     <img className='img-fluid opacity-25' src="https://i.ibb.co/KxKWdC6/flat-lay-assortment-tasty-kebabs-with-copy-space.jpg" alt="" />
                 </div>
 
-                <div className='position-absolute bottom-50 start-50 translate-middle-x text-center text-white w-100 px-5'>
+                <div className='position-absolute bottom-50 start-50 translate-middle-x text-center text-white w-100 px-5 banner-title'>
 
                     <h1 className=' my-2 fs-1'>
                         Discover the Rich Flavors of Turkey
@@ -33,7 +35,7 @@ const Home = () => {
 
             {/* carousel */}
 
-            <div className='container my-5 py-5 rounded bg-danger bg-opacity-75 text-center'>
+            <div className='container my-5 py-5 rounded bg-danger bg-opacity-75 text-center my-slider'>
 
                 <h3 className='mb-5 fs-2'>
                     Our Famous Recipes
@@ -43,7 +45,7 @@ const Home = () => {
                     <Carousel.Item>
                         <div className='d-lg-flex '>
                             <img
-                                className=" w-50 h-50 rounded "
+                                className="my-slider-img w-50 h-50 rounded "
 
                                 src="https://i.ibb.co/0DW9gDq/fb6d7f-47e6a9c8151b450b8f5965c26d560ccb-mv2.webp"
                                 alt="First slide"
@@ -51,7 +53,7 @@ const Home = () => {
 
 
 
-                            <div className='px-5 '>
+                            <div className='px-5 my-slider-text '>
                                 <h3 className='fs-3 fw-bold'>Manti</h3>
                                 <p className='fs-5'><span className='fs-4 fw-bold'>Manti</span> is a traditional Turkish dish that consists of small dumplings typically filled with spiced ground lamb or beef and served with a yogurt sauce and melted butter or tomato sauce. The dumplings are usually made by hand and can be served boiled or baked.</p>
                             </div>
@@ -63,12 +65,12 @@ const Home = () => {
                     <Carousel.Item>
                         <div className='d-lg-flex'>
                             <img
-                                className="d-block w-50 h-25  rounded"
+                                className="my-slider-img d-block w-50 h-25  rounded"
                                 src="https://i.ibb.co/X2ktQnh/Sea-bass.jpg"
                                 alt="Second slide"
                             />
 
-                            <div className='px-5 '>
+                            <div className='px-5 my-slider-text '>
                                 <h3 className='fs-3 fw-bold'>Sea Bass</h3>
                                 <p className='fs-5'><span className='fs-4 fw-bold'>Sea Bass</span> refers to several species of fish that are popular in both commercial and recreational fishing. These fish are known for their mild, white flesh and are often considered a delicacy. Some common species of sea bass include the European sea bass, the black sea bass, and the Chilean sea bass.</p>
                             </div>
@@ -77,12 +79,12 @@ const Home = () => {
                     <Carousel.Item>
                         <div className='d-lg-flex'>
                             <img
-                                className="d-block w-50 h-25  rounded  "
+                                className="d-block my-slider-img w-50 h-25  rounded  "
                                 src="https://i.ibb.co/314Xt59/Baklava-Recipe-16.jpg"
                                 alt="Third slide"
                             />
 
-                            <div className='px-5 '>
+                            <div className='px-5 my-slider-text '>
                                 <h3 className='fs-3 fw-bold'>Baklava</h3>
                                 <p className='fs-5'><span className='fs-4 fw-bold'>Baklava</span> is a sweet pastry that is popular in many Middle Eastern and Mediterranean countries, including Turkey, Greece, and Lebanon. The pastry is made by layering phyllo dough with a mixture of chopped nuts, such as pistachios, walnuts, or almonds, and a sweet syrup or honey. After baking, the pastry is cut into small diamond-shaped pieces and served as a dessert.
                                 </p>
@@ -92,12 +94,12 @@ const Home = () => {
                     <Carousel.Item>
                         <div className='d-lg-flex'>
                             <img
-                                className="d-block w-50 h-25  rounded  "
+                                className="d-block my-slider-img w-50 h-25  rounded  "
                                 src="https://i.ibb.co/HPGJ24Q/best-lamb-kebab-recipe.jpg"
                                 alt="First slide"
                             />
 
-                            <div className='px-5 '>
+                            <div className='px-5 my-slider-text '>
                                 <h3 className='fs-3 fw-bold'>Lamb Kebab</h3>
                                 <p className='fs-5'><span className='fs-4 fw-bold'>Lamb Kebab</span> is a popular dish that consists of grilled or roasted lamb meat that is typically served on skewers or with a variety of accompaniments, such as rice, vegetables, and bread. The meat used in lamb kebab is usually marinated in a mixture of spices, herbs, and other ingredients to add flavor and tenderize the meat before it is cooked.
 
@@ -108,12 +110,12 @@ const Home = () => {
                     <Carousel.Item>
                         <div className='d-lg-flex'>
                             <img
-                                className="d-block w-50 h-25  rounded  "
+                                className="d-block my-slider-img w-50 h-25  rounded  "
                                 src="https://i.ibb.co/dsTKyN4/baklava-recipe-3.jpg"
                                 alt="Second slide"
                             />
 
-                            <div className='px-5 '>
+                            <div className='px-5 my-slider-text '>
                                 <h3 className='fs-3 fw-bold'>Baklava</h3>
                                 <p className='fs-5'>
                                     <span className='fs-4 fw-bold'>Baklava</span> is a sweet pastry that is popular in many Middle Eastern and Mediterranean countries, including Turkey, Greece, and Lebanon. The pastry is made by layering phyllo dough with a mixture of chopped nuts, such as pistachios, walnuts, or almonds, and a sweet syrup or honey. After baking, the pastry is cut into small diamond-shaped pieces and served as a dessert.
@@ -124,12 +126,12 @@ const Home = () => {
                     <Carousel.Item>
                         <div className='d-lg-flex'>
                             <img
-                                className="d-block w-50 h-25 rounded  "
+                                className="d-block my-slider-img w-50 h-25 rounded  "
                                 src="https://i.ibb.co/k3pR4pr/Manti-84d39c9632cf40fcb0ca7625d63556b5.jpg"
                                 alt="Third slide"
                             />
 
-                            <div className='px-5 '>
+                            <div className='px-5 my-slider-text '>
                                 <h3 className='fs-3 fw-bold'>Manti</h3>
                                 <p className='fs-5'><span className='fs-4 fw-bold'>Manti</span> is a traditional Turkish dish that consists of small dumplings typically filled with spiced ground lamb or beef and served with a yogurt sauce and melted butter or tomato sauce. The dumplings are usually made by hand and can be served boiled or baked.</p>
                             </div>
@@ -138,11 +140,11 @@ const Home = () => {
                     <Carousel.Item>
                         <div className='d-lg-flex'>
                             <img
-                                className="d-block w-50 h-25  rounded  "
+                                className="d-block my-slider-img w-50 h-25  rounded  "
                                 src="https://i.ibb.co/zxg77C2/turkish-adana-kebab-720x720.jpg"
                                 alt="Third slide"
                             />
-                            <div className='px-5 '>
+                            <div className='px-5 my-slider-text '>
                                 <h3 className='fs-3 fw-bold'> Kebab</h3>
                                 <p className='fs-5'><span className='fs-4 fw-bold'>Kebab</span> is a dish that consists of grilled or roasted meat that is typically served on skewers or with a variety of accompaniments, such as rice, vegetables, and bread. Kebabs are popular in many Middle Eastern, Mediterranean, and South Asian countries, and are often associated with street food and outdoor grilling.</p>
                             </div>
@@ -152,11 +154,11 @@ const Home = () => {
                     <Carousel.Item>
                         <div className='d-lg-flex'>
                             <img
-                                className="d-block w-50 h-25  rounded  "
+                                className="d-block my-slider-img w-50 h-25  rounded  "
                                 src="https://i.ibb.co/4Tnsmk7/Turkish-Pizza-Lahmacun.jpg"
                                 alt="Third slide"
                             />
-                            <div className='px-5 '>
+                            <div className='px-5 my-slider-text '>
                                 <h3 className='fs-3 fw-bold'>Lahmacun</h3>
                                 <p className='fs-5'><span className='fs-4 fw-bold'>Lahmacun</span> is a popular Middle Eastern and Mediterranean dish that is often referred to as "Turkish pizza". It consists of a thin, round piece of dough that is topped with a mixture of minced meat (usually lamb or beef), onions, tomatoes, herbs, and spices. The dough is then baked in a hot oven until crispy.</p>
                             </div>
@@ -168,7 +170,7 @@ const Home = () => {
 
             {/* chef cards */}
 
-            <div className='container mx-auto'>
+            <div className='container mx-auto '>
                 <h3 className='text-center fs-1'>Famous Chef's</h3>
                 <Container fluid >
                     <Row>
@@ -189,7 +191,7 @@ const Home = () => {
             <div className='container my-5 py-5'>
                 <h2 className='fs-4 text-center'>Healthy Delights from the Heart of Turkey: Nourishing Your Body and Soul with Turkish Cuisine</h2>
                 <div className='container my-5 d-lg-flex gap-5'>
-                    <div className=' w-50 h-50 '>
+                    <div className=' w-50 h-50 health-img'>
                         <img className='w-100 rounded h-50' src="https://i.ibb.co/fF65L57/3637975.jpg" alt="" />
                     </div>
                     <div className='col py-5'>
@@ -210,7 +212,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='container my-5 d-lg-flex gap-5'>
+                <div className='container my-5 health-fx d-lg-flex gap-5'>
                     <div >
                         <h3 className='py-2 text-center'>Average Nutrition From Turkish Food</h3>
                         <Table striped bordered hover className='text-center'>
@@ -302,18 +304,18 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className=' w-50 h-50 py-5'>
-                        <img className='w-100 rounded h-100 py-5' src="https://i.ibb.co/7zGZ0Nw/7878.jpg" alt="" />
+                    <div className=' w-50 h-50 py-5 health-fx-img'>
+                        <img className='w-100 rounded  h-100' src="https://i.ibb.co/7zGZ0Nw/7878.jpg" alt="" />
                     </div>
                 </div>
 
                 <div className='container my-5 d-lg-flex gap-5'>
 
-                    <div className=' w-50 h-50 '>
+                    <div className=' w-50 h-50 nutrition-img'>
                         <img className='w-100 rounded h-50' src="https://i.ibb.co/3TSVH1K/2002-i203-016-nutritionist-dietitian-cartoon.jpg" alt="" />
                     </div>
 
-                    <div className='w-50 py-5'>
+                    <div className='nutrition w-50 py-5'>
                         <h3>Some Tips From Nutritionist</h3>
                         <p>
                             Start your day with a traditional Turkish breakfast, which typically includes fresh vegetables, olives, cheese, boiled eggs, and whole-grain bread. This is a nutritious and filling meal that will keep you energized throughout the morning.

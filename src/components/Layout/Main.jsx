@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 const Main = () => {
     return (
         <>
-        <Header></Header>
+        {/* <Header></Header> */}
         <Outlet></Outlet>
         <Footer></Footer>
         </>
