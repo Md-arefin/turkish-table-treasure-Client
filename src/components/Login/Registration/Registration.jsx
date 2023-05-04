@@ -18,11 +18,18 @@ const Registration = () => {
 
         console.log(name, email, photo, password, confirmPassword)
         setError('')
-        if (password != confirmPassword) {
-            setError("Confirm Password does not match")
-            return
 
+
+        if(!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password)) {
+            setError("your password should be minimum 8 characters, at least 1 letter and 1 number and 1 special character");
+            return;
+
+        } else if (password != confirmPassword) {
+            setError("Confirm Password does not match")
+            return;
         }
+
+
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
@@ -72,7 +79,7 @@ const Registration = () => {
                 </Form.Group>
 
                 <Form.Text className="text-danger">
-                <p>{error}</p>
+                    <p>{error}</p>
                 </Form.Text>
 
 

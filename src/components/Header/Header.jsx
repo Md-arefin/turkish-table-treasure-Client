@@ -21,16 +21,16 @@ const Header = () => {
                     <Nav.Link href="#">
                         {
 
-                            user && <h5> <FaUserGraduate className="text-primary fs-4" /> </h5>
+                            user && <FaUserGraduate className="text-primary fs-4" />
 
                         }
                     </Nav.Link>
                     <Nav.Link href="#" className='px-3'>
                         {
                             user ? <Button variant='danger'>Logout</Button> :
-                            <Link to='/login'>
-                            <Button variant='success'>Login</Button>
-                            </Link>
+                                <Link to='/login'>
+                                    <Button variant='success'>Login</Button>
+                                </Link>
                         }
                     </Nav.Link>
                 </Container>
