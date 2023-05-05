@@ -46,7 +46,7 @@ const Home = () => {
 
                 <Carousel className='px-5 mx-auto'>
                     <Carousel.Item>
-                        <div className='d-lg-flex '>
+                        <div className='d-lg-flex position-relative'>
                             <img
                                 className="my-slider-img w-50 h-50 rounded "
 

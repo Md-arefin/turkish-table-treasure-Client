@@ -14,9 +14,14 @@ const RecipesCard = ({ recipe }) => {
     // console.log(recipe)
     const { image, ingredients, name, steps } = recipe;
 
+ 
     const handleFavBtn = () => {
         toast("My Favorite Recipe");
         setIsClicked(true);
+        setTimeout(() => {
+            // enable the button after the action is complete
+            setIsClicked(false);
+          }, 6000);
     }
 
     return (
@@ -46,7 +51,7 @@ const RecipesCard = ({ recipe }) => {
                     </Card.Text>
                     <Button
                         onClick={handleFavBtn}
-                        disabled={{isClicked}}
+                        disabled={ isClicked }
                         className='border rounded bg-success w-100
                         position-absolute bottom-0 start-0'
                         variant="">

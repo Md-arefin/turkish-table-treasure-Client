@@ -1,9 +1,17 @@
-@media screen and (min-width:350px) and (max-width:700px){
-    .res-header{
+@media screen and (min-width:350px) and (max-width:700px) {
+    .res-header {
         font-size: 12px !important;
     }
 
-    .cs-title{
+    .cs-title {
         font-size: 15px !important;
+    }
+
+    .custom {
+        flex-direction: column-reverse !important;
+    }
+
+    .pic{
+        margin-left: 50px;
     }
 }

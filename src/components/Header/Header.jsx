@@ -35,10 +35,10 @@ const Header = () => {
                         {
 
                             user ?
-                                <div className='d-flex'>
+                                <div className='d-flex custom'>
                                     <span className='text-white px-2'>{user.displayName}</span>
                                     <div>
-                                        <img style={{ width: '25px', height: "25px" }} src={user.photoURL} alt="" />
+                                        <img class="rounded-5 pic" style={{ width: '25px', height: "25px" }} src={user.photoURL} alt="" />
                                     </div>
                                 </div> : <FaUserGraduate className="text-primary fs-4" />
 
