@@ -1,10 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Registration = () => {
-    const { createUser, signInGooglePopUp, profileUpdate } = useContext(AuthContext);
+
+    useTitle('Register')
+
+    const { createUser, signInGooglePopUp, updateUserProfile } = useContext(AuthContext);
 
     const [error, setError] = useState("")
 
@@ -36,17 +40,13 @@ const Registration = () => {
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
+                updateUserProfile({
+                    displayName: name, photoURL: photo
+                })
             })
             .catch(error => {
                 console.log(error);
             })
-
-            profileUpdate(name, photo)
-            .then(() =>{ })
-            .catch(error =>{
-                console.log(error)
-            })
-
     }
 
     const handleGoogle = () => {

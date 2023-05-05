@@ -20,7 +20,7 @@ const Header = () => {
         <>
             <Navbar bg="dark" variant="dark">
                 <Container className='res-header'>
-                    <div className='d-lg-flex'>
+                    <div className='d-lg-flex '>
                         <Navbar.Brand className='cs-title' href="/">Turkish Table Treasure</Navbar.Brand>
 
 

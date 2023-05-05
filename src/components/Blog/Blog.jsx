@@ -1,16 +1,26 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import Pdf from "react-to-pdf";
+import useTitle from "../../Hooks/useTitle"
+
 
 const Blog = () => {
     const ref = React.createRef();
 
+    useTitle("Blog")
+
     return (
+
         <Container>
+
+
             <Pdf targetRef={ref} filename="code-example.pdf">
                 {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
             </Pdf>
             <div ref={ref}>
+
+
+
                 <div>
                     <h1>
                         1. Tell us the differences between uncontrolled and controlled components.

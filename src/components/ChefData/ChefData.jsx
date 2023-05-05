@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import './ChefData.css'
 
 const ChefData = ({ data }) => {
+
+    
+
     const { _id, chefBio, chefName, chefPicture, likes, numberOfRecipes,
         yearsOfExperience, } = data;
 

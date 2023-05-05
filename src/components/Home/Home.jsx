@@ -1,18 +1,21 @@
 import React from 'react';
 import { Carousel, Col, Container, Row, Table } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../Hooks/useTitle';
 import ChefData from '../ChefData/ChefData';
 import './Home.css';
 
 
 const Home = () => {
 
+    useTitle("Home")
+
     const chefData = useLoaderData();
     // console.log(chefData)
 
     return (
         <div>
-
+        
             {/* banner */}
 
             <div className='w-auto h-50 position-relative bg-black' >
@@ -23,7 +26,7 @@ const Home = () => {
 
                 <div className='position-absolute bottom-50 start-50 translate-middle-x text-center text-white w-100 px-5 banner-title'>
 
-                    <h1 className=' my-2 fs-1'>
+                    <h1 className=' my-2 fs-1 pb-5'>
                         Discover the Rich Flavors of Turkey
                     </h1>
 
@@ -203,7 +206,7 @@ const Home = () => {
                             <br />
                             <br />
                             Turkish cuisine also often includes legumes such as chickpeas and lentils, which are high in fiber and protein, as well as nuts like pistachios and walnuts, which can be a good source of healthy fats.
-                            
+
                             However, it is worth noting that some traditional Turkish dishes may be high in calories, sodium, and fat due to the use of oil, butter, and cheese. Portion control is important when consuming these dishes.
                             <br />
                             <br />
@@ -300,7 +303,7 @@ const Home = () => {
                             </tbody>
                         </Table>
                         <p>
-                           <span className='fw-bold fs-5'> Note:</span> The nutrient amounts are approximate and may vary depending on the recipe and serving size.
+                            <span className='fw-bold fs-5'> Note:</span> The nutrient amounts are approximate and may vary depending on the recipe and serving size.
                         </p>
                     </div>
 

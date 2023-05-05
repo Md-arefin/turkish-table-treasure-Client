@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Login = () => {
+    useTitle("Login")
 
     const [loginError, setLoginError] = useState("")
 

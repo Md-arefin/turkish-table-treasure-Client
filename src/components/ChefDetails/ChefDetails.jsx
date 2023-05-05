@@ -4,8 +4,11 @@ import { FaHeart } from "react-icons/fa";
 import RecipesCard from '../RecipesCard/RecipesCard';
 import { Row } from 'react-bootstrap';
 import LazyLoad from 'react-lazy-load';
+import useTitle from '../../Hooks/useTitle';
 
 const ChefDetails = () => {
+
+    useTitle("Chef-Details")
 
     const ChefData = useLoaderData();
     console.log(ChefData)
